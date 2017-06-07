@@ -1,20 +1,31 @@
-<html lang="en">
+<html lang="en" style="background-color:#696969;">
   <head>
     <meta charset="UTF-8">
     <title>アニMeme</title>
     <meta name="description" content="Page for friendly team of A/V professional weebs looking to make your con a little spicier">
+    <link rel="stylesheet" href="loading.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <script src="script.js"></script>
     <script src="https://unpkg.com/aframe-text-geometry-component@0.5.1/dist/aframe-text-geometry-component.min.js"></script>
   </head>
   <body>
-      <a-scene>
+      <div id="loader" style="background-color:#696969;width:100%;height:100%;">
+        <div style="top:50%;" class="sk-folding-cube">
+        <div class="sk-cube1 sk-cube"></div>
+        <div class="sk-cube2 sk-cube"></div>
+        <div class="sk-cube4 sk-cube"></div>
+        <div class="sk-cube3 sk-cube"></div>
+      </div>
+      </div>
+      <a-scene vr-mode-ui="enabled: false">
         <a-assets>
           <img id="pink" src="https://img.gs/bbdkhfbzkk/stretch/http://i.imgur.com/1hyyIUi.jpg" crossorigin="anonymous" />
           <img src="https://img.gs/bbdkhfbzkk/stretch/https://i.imgur.com/25P1geh.png" id="grid" crossorigin="anonymous">
           <img src="https://img.gs/bbdkhfbzkk/2048x1024,stretch/http://i.imgur.com/WMNH2OF.jpg" id="chrome" crossorigin="anonymous">
           <img id="sky" src="https://img.gs/bbdkhfbzkk/2048x2048,stretch/http://i.imgur.com/WqlqEkq.jpg" crossorigin="anonymous" />
           <a-asset-item id="noto" src="Katakana_Medium.json"></a-asset-item>
-          <a-asset-item id="exoFont" src="https://cdn.glitch.com/c719c986-c0c5-48b8-967c-3cd8b8aa17f3%2Fexo2Black.typeface.json?1490305922150"></a-asset-item>
+          <a-asset-item id="exoFont" src="exoFont.json"></a-asset-item>
         </a-assets>
 
         <a-entity scale="2 2 2" geometry="primitive: torusKnot" position="0 6 -10" material="color: magenta; metalness:1; roughness: 0.1; sphericalEnvMap: #sky;">

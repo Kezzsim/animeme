@@ -3,27 +3,63 @@
     <meta charset="UTF-8">
     <title>アニMeme</title>
     <meta name="description" content="Page for friendly team of A/V professional weebs looking to make your con a little spicier">
-    <link rel="stylesheet" href="loading.css">
+    <!-- CSS Loading -->
+    <link rel="stylesheet" href="css/loading.css">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/sidebar.css">
+    <!-- CDN Script loading -->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+
     <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <!-- Local Script and misc. -->
     <script src="script.js"></script>
     <script src="https://unpkg.com/aframe-text-geometry-component@0.5.1/dist/aframe-text-geometry-component.min.js"></script>
   </head>
   <body>
       <div id="loader" style="background-color:#696969;width:100%;height:100%;">
-        <div style="top:50%;" class="sk-folding-cube">
+        <div style="top:40%;" class="sk-folding-cube">
         <div class="sk-cube1 sk-cube"></div>
         <div class="sk-cube2 sk-cube"></div>
         <div class="sk-cube4 sk-cube"></div>
         <div class="sk-cube3 sk-cube"></div>
       </div>
       </div>
+
+      <div id="wrapper" class="toggled-2">
+          <!-- Sidebar -->
+          <div id="sidebar-wrapper">
+              <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
+
+                  <li class="active">
+                      <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-info-circle fa-stack-1x "></i></span> About Us</a>
+                  </li>
+                  <li>
+                      <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-calendar fa-stack-1x "></i></span>Conventions</a>
+                  </li>
+                  <li>
+                      <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-music fa-stack-1x "></i></span>DJ's</a>
+                  </li>
+                  <li>
+                      <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-heart fa-stack-1x "></i></span>About</a>
+                  </li>
+
+              </ul>
+          </div><!-- /#sidebar-wrapper -->
+
+        </div>
+
       <a-scene vr-mode-ui="enabled: false">
         <a-assets>
           <img id="pink" src="https://img.gs/bbdkhfbzkk/stretch/http://i.imgur.com/1hyyIUi.jpg" crossorigin="anonymous" />
           <img src="https://img.gs/bbdkhfbzkk/stretch/https://i.imgur.com/25P1geh.png" id="grid" crossorigin="anonymous">
           <img src="https://img.gs/bbdkhfbzkk/2048x1024,stretch/http://i.imgur.com/WMNH2OF.jpg" id="chrome" crossorigin="anonymous">
           <img id="sky" src="https://img.gs/bbdkhfbzkk/2048x2048,stretch/http://i.imgur.com/WqlqEkq.jpg" crossorigin="anonymous" />
+          <a-asset-item id="exoItalicFont" src="https://cdn.glitch.com/c719c986-c0c5-48b8-967c-3cd8b8aa17f3%2Fexo2BlackItalic.typeface.json?1490305922725"></a-asset-item>
           <a-asset-item id="noto" src="Katakana_Medium.json"></a-asset-item>
           <a-asset-item id="exoFont" src="exoFont.json"></a-asset-item>
         </a-assets>
@@ -35,14 +71,18 @@
         <a-entity position="-3 1 -6" rotation="5 0 0">
           <a-entity
             rotation="0.000 0.573 11.230"
-            position="0.524 1.062 0.993"
+            position="1.215 1.062 0.993"
             scale="2.100 2.100 2.100"
             text-geometry="value: !8; font: #noto; bevelEnabled: true; bevelSize: 0.05; bevelThickness: 0.05; curveSegments: 12; size: 1; height: 0;"
             material="color:lavenderblush; metalness:1; roughness: 0; sphericalEnvMap: #pink;"
           ></a-entity>
 
-          <a-entity position="0.961 0 0" scale="0.6 1.2 1" text-geometry="value: MEME; font: #exoFont; bevelEnabled: true; bevelSize: 0.1; bevelThickness: 0.1; curveSegments: 1; size: 1.5; height: 0.5;" material="color:pink; metalness:0.9; roughness: 0.05; sphericalEnvMap: #chrome;"></a-entity>
-
+          <a-entity position="1.717 0 0" scale="0.6 1.2 1" text-geometry="value: MEME; font: #exoFont; bevelEnabled: true; bevelSize: 0.1; bevelThickness: 0.1; curveSegments: 1; size: 1.5; height: 0.5;" material="color:pink; metalness:0.9; roughness: 0.05; sphericalEnvMap: #chrome;"></a-entity>
+          <a-entity scale="0.8 0.8 0.8" rotation="-88.522 0 0" position="2.051 0.151 2.030" text-geometry="value: @A-Next; font: #exoItalicFont; style: italic; size: 0.8; weight: bold; height: 0;"
+                  material="shader: flat; color: white"></a-entity>
+        <a-entity scale="0.8 0.8 0.8" rotation="-88.522 0 0" position="2.051 0.151 2.030" text-geometry="value: @A-Next; font: #exoItalicFont; style: italic; size: 0.8; weight: bold; height: 0; bevelEnabled: true; bevelSize: 0.04; bevelThickness: 0.04; curveSegments: 1"
+                  material="shader: flat; color: white; transparent: true; opacity: 0.4"></a-entity>
+      </a-entity>
         </a-entity>
 
         <a-entity
@@ -56,5 +96,6 @@
 
         <a-sky src="#sky" rotation="0 -90 0"></a-sky>
       </a-scene>
+
     </body>
   </html>

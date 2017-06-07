@@ -5,5 +5,5 @@ $(function () {
 
 function assetsLoaded () {
   $("#loader").remove();
-
+  
 }

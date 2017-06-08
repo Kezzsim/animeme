@@ -41,6 +41,7 @@ function setMode () {
 
   if($("#MusicBtn").hasClass("active")){
     videoSp.play()
+    $("#Perf").show();
     if (!videoSp.paused) {
       console.log(videoSp.paused)
       $("a-videosphere").attr('visible', "true");
@@ -54,9 +55,17 @@ function setMode () {
 
   }
   else{
+    $("#Perf").hide();
     $("a-videosphere").attr('visible', "false");
     $("a-sky").attr("src", "#sky");
     $("a-sky").attr('visible', "true");
     $("#renderedObjects").attr('visible', "true");
+  }
+
+  if($("#thksBtn").hasClass("active")){
+    $("#Thanks").show();
+  }
+  else {
+    $("#Thanks").hide();
   }
 }

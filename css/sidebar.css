@@ -158,18 +158,35 @@
 
    /*Transparency Settings */
 
-#introText, #Events {
+#introText, #Events, #Perf, #Thanks {
   /*Hide on start */
   display: none;
 }
 
 #introText {
-  top: 55%;
+  top: 52%;
 
 }
 
 #Events {
   top: 10%;
+}
+
+#Perf {
+  top:15%;
+}
+
+#Thanks {
+  top: 35%;
+}
+
+#introText p {
+  font-size: 130%;
+}
+
+#Perf p {
+  font-size: 100%;
+
 }
 
 .onTop {
@@ -195,4 +212,24 @@
 
 .eventPanelTwo {
   top:75%;
+}
+
+.logo-1 {
+  width: 100%;
+  max-width: 110%;
+
+}
+.logo-2 {
+  width: 115%;
+  max-width: 120%;
+}
+
+.djPanel1 {
+  top:34%;
+}
+
+.profile1 {
+  width: 25%;
+  float: left;
+
 }

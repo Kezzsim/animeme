@@ -3,18 +3,39 @@
     <meta charset="UTF-8">
     <title>アニMeme</title>
     <meta name="description" content="Page for friendly team of A/V professional weebs looking to make your con a little spicier">
+    <meta name="theme-color" content="#e55ea2">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="favicon/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicon/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="favicon/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="favicon/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="favicon/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="favicon/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="favicon/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="favicon/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="favicon/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="favicon/favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="&nbsp;"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="favicon/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="favicon/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="favicon/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="favicon/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="favicon/mstile-310x310.png" />
     <!-- CSS Loading -->
     <link rel="stylesheet" href="css/loading.css">
-
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet">
-
     <link rel="stylesheet" href="css/sidebar.css">
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
     <!-- CDN Script loading -->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-
-    <script src="js/bootstrap.min.js"></script>
-
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
     <!-- Local Script and misc. -->
     <script src="script.js"></script>
@@ -34,24 +55,26 @@
           <!-- Sidebar -->
           <div id="sidebar-wrapper">
               <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
-
-                  <li class="active">
+                  <li id="infoBtn" class="active">
                       <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-info-circle fa-stack-1x "></i></span> About Us</a>
                   </li>
-                  <li>
+                  <li id="CalBtn">
                       <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-calendar fa-stack-1x "></i></span>Conventions</a>
                   </li>
-                  <li>
+                  <li id="MusicBtn">
                       <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-music fa-stack-1x "></i></span>DJ's</a>
                   </li>
-                  <li>
-                      <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-heart fa-stack-1x "></i></span>About</a>
+                  <li id="thksBtn">
+                      <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-heart fa-stack-1x "></i></span>Thanks</a>
                   </li>
 
               </ul>
           </div><!-- /#sidebar-wrapper -->
 
+          <!-- NO MORE bootstrap -->
+
         </div>
+
 
       <a-scene vr-mode-ui="enabled: false">
         <a-assets>
@@ -59,42 +82,49 @@
           <img src="https://img.gs/bbdkhfbzkk/stretch/https://i.imgur.com/25P1geh.png" id="grid" crossorigin="anonymous">
           <img src="https://img.gs/bbdkhfbzkk/2048x1024,stretch/http://i.imgur.com/WMNH2OF.jpg" id="chrome" crossorigin="anonymous">
           <img id="sky" src="https://img.gs/bbdkhfbzkk/2048x2048,stretch/http://i.imgur.com/WqlqEkq.jpg" crossorigin="anonymous" />
+          <img id="skyBkp" src="img/eqr1.JPG"/>
           <a-asset-item id="exoItalicFont" src="https://cdn.glitch.com/c719c986-c0c5-48b8-967c-3cd8b8aa17f3%2Fexo2BlackItalic.typeface.json?1490305922725"></a-asset-item>
           <a-asset-item id="noto" src="Katakana_Medium.json"></a-asset-item>
           <a-asset-item id="exoFont" src="exoFont.json"></a-asset-item>
+          <video id="DJvideo" src="Video/DJ_PromoLoop1.mp4" muted autoplay loop playsinline webkit-playsinline></video>
         </a-assets>
 
-        <a-entity scale="2 2 2" geometry="primitive: torusKnot" position="0 6 -10" material="color: magenta; metalness:1; roughness: 0.1; sphericalEnvMap: #sky;">
-          <a-animation easing="linear" attribute="rotation" dur="10000" to="0 0 360" repeat="indefinite"></a-animation>
-        </a-entity>
+        <a-videosphere visible="false" src="#DJvideo" rotation="0 282 20"></a-videosphere>
 
-        <a-entity position="-3 1 -6" rotation="5 0 0">
-          <a-entity
-            rotation="0.000 0.573 11.230"
-            position="1.215 1.062 0.993"
-            scale="2.100 2.100 2.100"
-            text-geometry="value: !8; font: #noto; bevelEnabled: true; bevelSize: 0.05; bevelThickness: 0.05; curveSegments: 12; size: 1; height: 0;"
-            material="color:lavenderblush; metalness:1; roughness: 0; sphericalEnvMap: #pink;"
-          ></a-entity>
+        <a-entity id="renderedObjects">
 
-          <a-entity position="1.717 0 0" scale="0.6 1.2 1" text-geometry="value: MEME; font: #exoFont; bevelEnabled: true; bevelSize: 0.1; bevelThickness: 0.1; curveSegments: 1; size: 1.5; height: 0.5;" material="color:pink; metalness:0.9; roughness: 0.05; sphericalEnvMap: #chrome;"></a-entity>
-          <a-entity scale="0.8 0.8 0.8" rotation="-88.522 0 0" position="2.051 0.151 2.030" text-geometry="value: @A-Next; font: #exoItalicFont; style: italic; size: 0.8; weight: bold; height: 0;"
-                  material="shader: flat; color: white"></a-entity>
-        <a-entity scale="0.8 0.8 0.8" rotation="-88.522 0 0" position="2.051 0.151 2.030" text-geometry="value: @A-Next; font: #exoItalicFont; style: italic; size: 0.8; weight: bold; height: 0; bevelEnabled: true; bevelSize: 0.04; bevelThickness: 0.04; curveSegments: 1"
-                  material="shader: flat; color: white; transparent: true; opacity: 0.4"></a-entity>
-      </a-entity>
-        </a-entity>
+          <a-entity scale="2 2 2" geometry="primitive: torusKnot" position="0 6 -10" material="color: magenta; metalness:1; roughness: 0.1; sphericalEnvMap: #sky;">
+            <a-animation easing="linear" attribute="rotation" dur="10000" to="0 0 360" repeat="indefinite"></a-animation>
+          </a-entity>
 
-        <a-entity
-          geometry="primitive: plane; width: 10000; height: 10000;" rotation="-90 0 0"
-          material="src: #grid; repeat: 10000 10000; transparent: true;metalness:0.6; roughness: 0.4; sphericalEnvMap: #sky;"></a-entity>
+          <a-entity position="-3 1 -6" rotation="5 0 0">
+            <a-entity
+              rotation="0.000 0.573 11.230"
+              position="1.215 1.062 0.993"
+              scale="2.100 2.100 2.100"
+              text-geometry="value: !8; font: #noto; bevelEnabled: true; bevelSize: 0.05; bevelThickness: 0.05; curveSegments: 12; size: 1; height: 0;"
+              material="color:lavenderblush; metalness:1; roughness: 0; sphericalEnvMap: #pink;"
+              ></a-entity>
 
-        <a-entity light="color: #ccccff; intensity: 1; type: ambient;" visible=""></a-entity>
-        <a-entity light="color: ffaaff; intensity: 1.5" position="5 5 5"></a-entity>
-        <a-entity light="color: white; intensity: 0.5" position="-5 5 15"></a-entity>
-        <a-entity light="color: white; type: ambient;"></a-entity>
+              <a-entity position="1.717 0 0" scale="0.6 1.2 1" text-geometry="value: MEME; font: #exoFont; bevelEnabled: true; bevelSize: 0.1; bevelThickness: 0.1; curveSegments: 1; size: 1.5; height: 0.5;" material="color:pink; metalness:0.9; roughness: 0.05; sphericalEnvMap: #chrome;"></a-entity>
+              <a-entity scale="0.8 0.8 0.8" rotation="-88.522 0 0" position="2.051 0.151 2.030" text-geometry="value: @A-Next; font: #exoItalicFont; style: italic; size: 0.8; weight: bold; height: 0;"
+                    material="shader: flat; color: white"></a-entity>
+                    <a-entity scale="0.8 0.8 0.8" rotation="-88.522 0 0" position="2.051 0.151 2.030" text-geometry="value: @A-Next; font: #exoItalicFont; style: italic; size: 0.8; weight: bold; height: 0; bevelEnabled: true; bevelSize: 0.04; bevelThickness: 0.04; curveSegments: 1"
+                    material="shader: flat; color: white; transparent: true; opacity: 0.4"></a-entity>
+                  </a-entity>
 
-        <a-sky src="#sky" rotation="0 -90 0"></a-sky>
+                <a-entity
+                geometry="primitive: plane; width: 10000; height: 10000;" rotation="-90 0 0"
+                material="src: #grid; repeat: 10000 10000; transparent: true;metalness:0.6; roughness: 0.4; sphericalEnvMap: #sky;"></a-entity>
+
+                <a-entity light="color: #ccccff; intensity: 1; type: ambient;" visible=""></a-entity>
+                <a-entity light="color: ffaaff; intensity: 1.5" position="5 5 5"></a-entity>
+                <a-entity light="color: white; intensity: 0.5" position="-5 5 15"></a-entity>
+                <a-entity light="color: white; type: ambient;"></a-entity>
+
+                </a-entity>
+                <a-sky src="#sky" rotation="0 -90 0"></a-sky>
+
       </a-scene>
 
     </body>

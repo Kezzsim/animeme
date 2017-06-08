@@ -8,6 +8,7 @@
    -o-transition: all 0.5s ease;
    transition: all 0.5s ease;
    overflow: hidden;
+   background: none;
 }
 
 #wrapper.toggled {
@@ -150,3 +151,5 @@
        width: auto;
 
    }
+
+   

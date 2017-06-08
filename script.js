@@ -8,6 +8,7 @@ $(function () {
 
 function assetsLoaded () {
   videoSp = $('#DJvideo').get(0);
+  setMode();
 
   $("#loader").remove();
 
@@ -23,8 +24,23 @@ function assetsLoaded () {
 }
 
 function setMode () {
+
+  if($("#infoBtn").hasClass("active")){
+    $("#introText").show();
+  }
+  else {
+    $("#introText").hide();
+  }
+
+  if($("#CalBtn").hasClass("active")){
+    $("#Events").show();
+  }
+  else {
+    $("#Events").hide();
+  }
+
   if($("#MusicBtn").hasClass("active")){
-    //videoSp.play()
+    videoSp.play()
     if (!videoSp.paused) {
       console.log(videoSp.paused)
       $("a-videosphere").attr('visible', "true");

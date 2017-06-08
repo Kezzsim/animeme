@@ -103,7 +103,7 @@
 
 
    #wrapper {
-       padding-left: 250px;
+       /* padding-left: 250px; */
    }
    .fixed-brand{
        width: 250px;
@@ -129,6 +129,7 @@
 
    #page-content-wrapper {
        /* padding: 20px; */
+
        position: relative;
        -webkit-transition: all 0.5s ease;
        -moz-transition: all 0.5s ease;
@@ -142,7 +143,6 @@
        /* padding-left: 250px; */
    }
    #wrapper.toggled-2 #page-content-wrapper {
-       position: relative;
        margin-right: 0;
        -webkit-transition: all 0.5s ease;
        -moz-transition: all 0.5s ease;
@@ -152,4 +152,47 @@
 
    }
 
-   
+   a-scene {
+     position: relative;
+   }
+
+   /*Transparency Settings */
+
+#introText, #Events {
+  /*Hide on start */
+  display: none;
+}
+
+#introText {
+  top: 55%;
+
+}
+
+#Events {
+  top: 10%;
+}
+
+.onTop {
+  background-color: transparent;
+  position: absolute;
+  z-index: 10;
+  left: 20%;
+  right: 15%;
+}
+
+.titleText {
+    color: white;
+}
+
+.eventPanelOne {
+  top:10%;
+
+}
+
+.eventPanelTwo {
+  top:50%;
+}
+
+.eventPanelTwo {
+  top:75%;
+}

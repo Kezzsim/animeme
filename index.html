@@ -1,11 +1,28 @@
-<html lang="en" style="background-color:#000000;">
+<html lang="en" style="background-color:#000000;" data-title="{title} | AniMeme" data-aframe-version="0.5.0">
   <head>
     <meta charset="UTF-8">
     <title>アニMeme</title>
+    <meta name="robots" content="all">
     <meta name="description" content="Page for friendly team of A/V professional weebs looking to make your con a little spicier">
+    <meta name="keywords" content="anime,memes,conventions,DJs,Live Sound,Manga,meme,projection">
     <meta name="theme-color" content="#e55ea2">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Facebook Meta -->
+    <meta property="og:title" content="アニMeme - A/V to keep the meme alive">
+    <meta property="og:site_name" content="アニMeme">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://animeme.moe/">
+    <meta property="og:description" content="Page for a friendly team of A/V professional weebs looking to make your con a little spicier.">
+    <meta property="og:image" content="http://animeme.moe/favicon/favicon-196x196.png">
+    <!-- Twitter Meta -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@kezzism">
+    <meta name="twitter:creator" content="@kezzism">
+    <meta name="twitter:title" content="アニMeme - A/V to keep the meme alive">
+    <meta name="twitter:description" content="Page for a friendly team of A/V professional weebs looking to make your con a little spicier. We do Projection Mapping, DJ'ing and more to make each convention we attend memorable AF">
+    <meta name="twitter:image" content="http://animeme.moe/favicon/favicon-196x196.png">
+    <meta name="mobile-web-app-capable" content="yes">
     <!-- Favicons -->
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="favicon/apple-touch-icon-57x57.png" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicon/apple-touch-icon-114x114.png" />
@@ -77,14 +94,45 @@
 
     <!-- here's where all the shown / hidden HTML overlay objects will be. You can use Bootstrap with the onTop class -->
 
-    <div id="introText" class="jumbotron onTop titleText">
-    <h1>Meme Mastery</h1>
-    <p>Welcome to アニMeme (AniMeme), your source for top quality convention hijinks. We use the magic of technology to make your memes come true!</p>
-    <a href="https://www.facebook.com/%E3%82%A2%E3%83%8Bmeme-1465187016873272/" class="btn btn-block btn-social btn-facebook">
+  <div id="introText" class="carousel slide onTop titleText" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#introText" data-slide-to="0" class="active"></li>
+    <li data-target="#introText" data-slide-to="1"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <div class="jumbotron">
+      <h1>Meme Mastery</h1>
+      <p>Welcome to アニMeme (AniMeme), your source for top quality convention hijinks. We use the magic of technology to make your memes come true!</p>
+      <a href="https://www.facebook.com/%E3%82%A2%E3%83%8Bmeme-1465187016873272/" class="btn btn-block btn-social btn-facebook">
       <i class="fa fa-facebook"></i>
       follow us on Facebook
-    </a>
+      </a>
+    </div>
+    </div>
+    <div class="item">
+      <div class="jumbotron">
+        <h1>Happening NOW: </h1>
+        <img style="margin:0.5%;" src="img/shootingStarTemp.jpg" class="img-thumbnail img-fluid" alt="Event cover">
+        <p><strong>AnimeNEXT 2017</strong> : Shooting Stars, insert your cosplay here</p>
+        <a href="https://www.facebook.com/events/727237907481073" class="btn btn-block btn-social btn-facebook">
+          <i class="fa fa-calendar"></i>
+          RSVP to our Facebook Event
+        </a>
+      </div>
+    </div>
   </div>
+  <!-- Controls -->
+  <a class="left carousel-control" href="#introText" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#introText" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>
   <div id="Events" class="onTop container-fluid">
     <div class="jumbotron eventPanelOne">
       <h1>Our Con Schedule:</h1>
@@ -109,6 +157,12 @@
       <h1>Our Magicians:</h1>
       <img src="img/datenKezz.svg" class="logo-1 img-fluid" alt="Responsive image">
       <img src="img/Nyu.svg" class="logo-2 img-fluid" alt="NyuruNyuruPantsuLogo">
+      <h1>Past performances:</h1>
+      <h4>Ponycon</h4>
+      <h4>Derpycon 2015</h4>
+      <h4>Bronycon 2012</h4>
+      <h4><strong>For demos, bookings and more E-mail:</strong> <a href="mailto:kezzsim@gmail.com?Subject=Please%20rock%20our%20con" target="_top">kezzsim@gmail.com</a></h4>
+
     </div>
 <!-- TODO : Detiled Artist Bios
     <div class="onTop djPanel1 container-fluid">
@@ -125,6 +179,7 @@
       <h1>Special Thanks To:</h1>
       <p><strong>Ada Rose Edwards</strong> Who developed A-Frame Vaporwave.</p>
       <p><strong>Bronies-NYC</strong> For being our home for the last 6 years! </p>
+      <p><strong>Surge.sh</strong> Our host, Command line based deployment solution </p>
     </div>
   </div>
 

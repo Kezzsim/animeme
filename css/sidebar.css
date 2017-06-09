@@ -1,4 +1,6 @@
 
+
+
 /* Toggle Styles */
 
 #wrapper {
@@ -156,7 +158,33 @@
      position: relative;
    }
 
-   /*Transparency Settings */
+   /*Carousel settings */
+
+   .carousel-control.left, .carousel-control.right {
+    background-image: none
+
+  }
+  .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
+  right: -30%;
+  }
+
+  .carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
+  left: -30%;
+  }
+
+  .carousel-indicators {
+    top: 85%;
+  }
+
+  .carousel .jumbotron {
+    background-color: transparent;
+  }
+
+  a[href^="mailto"] {
+    color:#FFA500;
+  }
+
+   /* Custom transparency Settings */
 
 #introText, #Events, #Perf, #Thanks {
   /*Hide on start */
@@ -165,7 +193,6 @@
 
 #introText {
   top: 52%;
-
 }
 
 #Events {

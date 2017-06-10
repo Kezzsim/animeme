@@ -32,6 +32,13 @@ function setMode () {
     $("#introText").hide();
   }
 
+  if($("#VidBtn").hasClass("active")){
+    $("#Vids").show();
+  }
+  else {
+    $("#Vids").hide();
+  }
+
   if($("#CalBtn").hasClass("active")){
     $("#Events").show();
   }

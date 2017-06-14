@@ -1,4 +1,9 @@
+@media (min-width: 700px) {
+  #mobileVideoLink1 {
+    display: none;
+  }
 
+ }
 
 
 /* Toggle Styles */

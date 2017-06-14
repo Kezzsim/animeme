@@ -21,6 +21,14 @@ function assetsLoaded () {
 
         });
 
+  $("#otherVidBtn").on("click", function (evt) {
+      console.log("TEST")
+      $("#menu li").removeClass("active");
+      $("#VidBtn").attr("class", "active");
+      setMode();
+
+  });
+
 }
 
 function setMode () {
